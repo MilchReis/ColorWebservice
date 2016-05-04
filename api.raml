@@ -1,0 +1,24 @@
+#%RAML 1.0
+title: ColorWebservice API
+version: v1
+baseUri: http://localhost:8080
+types:
+  Color:
+    properties:
+      red: number
+      green: number
+      blue: number
+      hex: string
+
+/color:
+  /rgb/hex/{hex}:
+    get:
+      description: Converts a RGB-Hexcode (like FFFFFF) to the red-green-blue representation.
+
+  /hex/rgb/{r}/{g}/{b}:
+    get:
+      description: Converts a red-green-blue representation  to the hexcode representation.
+
+  /hex/name/{name}:
+    get:
+      description: Converts a colorname to the code representations.
