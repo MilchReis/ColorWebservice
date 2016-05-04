@@ -1,5 +1,5 @@
 # ColorWebservice
-Simple rest webservice for converting color representations
+Simple rest webservice for converting color representations. This project is based on experimental work with spring boot and the spring rest api.
 
 ![alt text](https://github.com/MilchReis/ColorWebservice/blob/master/Screenshot.png?raw=true "Screenshot")
 
