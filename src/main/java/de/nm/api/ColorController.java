@@ -12,12 +12,12 @@ import de.nm.utils.ColorUtils;
 @RequestMapping("/color")
 public class ColorController {
 
-    @RequestMapping(value = "/rgb/hex/{hex}", method = RequestMethod.GET)
+    @RequestMapping(value = "/hex/{hex}", method = RequestMethod.GET)
     public Color convert(@PathVariable(value="hex") String hex) {
     	return new Color(hex);
     }
 
-    @RequestMapping(value = "/hex/rgb/{r}/{g}/{b}", method = RequestMethod.GET)
+    @RequestMapping(value = "/rgb/{r}/{g}/{b}", method = RequestMethod.GET)
     public Color convert(
     		@PathVariable(value="r") int r,
     		@PathVariable(value="g") int g,
@@ -25,7 +25,7 @@ public class ColorController {
     	return new Color(r, g, b);
     }
     
-    @RequestMapping(value = "/hex/name/{name}", method = RequestMethod.GET)
+    @RequestMapping(value = "/name/{name}", method = RequestMethod.GET)
     public Color convertFromName(@PathVariable(value="name") String name) {
     	return new Color(new ColorUtils().getColorHexByName(name));
     }
